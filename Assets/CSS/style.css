@@ -40,3 +40,7 @@
     background-image: url(background\ 2.jpg);  /* sets a background image */
     height: 40vh;
   }
+
+  .your-class::-webkit-input-placeholder {
+    color: #f75865
+}

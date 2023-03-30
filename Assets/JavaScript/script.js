@@ -7,6 +7,11 @@ $(document).ready(function(){
         var index = 0
         var weatherForecast = []
         var El = $("#cityEl").val();
+        if (!El){
+          $("#cityEl").attr("placeholder","Please enter name of the city")
+          $("input").addClass("your-class")
+      return;
+     }
         fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + El + "&limit=5&units=metric&appid=7ceb463b0dbb74278996f51113e27ee3", {
           method: 'GET',
           redirect: 'follow',

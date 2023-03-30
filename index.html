@@ -5,35 +5,35 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Bulma!</title>
+  <title>All In One Travel App</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./Assets/CSS/style.css">
 </head>
 
 <body>
 
-  <div class="columns has-background-primary p-3">
-    <div class="column is-one-fifth has-background-primary is-align-self-center">
+  <div class="columns has-background-link-dark p-3">
+    <div class="column is-one-fifth has-background-link-dark is-align-self-center">
       <figure class="image is-48x48">
-        <img class="is-rounded" src="AIO.png">
+        <img src="./Assets/Images/AIOlogo.png">
       </figure>
 
       
 
     </div>
 
-    <div class="column is-two-fifths  is-info has-background-primary is-align-self-center">
+    <div class="column is-two-fifths  is-info has-background-link-dark is-align-self-center">
       <input class="input is-rounded" id="cityEl" type="text"
         placeholder="Enter City...">
     </div>
-    <div class="column is-one-fifth has-background-primary is-align-self-center">
+    <div class="column is-one-fifth has-background-link-dark is-align-self-center">
       <div class="buttons">
         <button class="button is-info" id ="btnStart">Check Weather</button>
       </div>
 
     </div>
     <!----- Drop Down using CSS  -->
-    <div class="column is-one-fifth has-background-primary is-align-self-center">
+    <div class="column is-one-fifth has-background-link-dark is-align-self-center">
       <div class="buttons">
 
         <div class="dropdown">
@@ -55,8 +55,7 @@
         </div>
       </div>
     </div>
-   
-
+  
   </div>
 <!----------------Section to append history buttons------------>
   <section class="section" id="attBtn">
@@ -73,10 +72,22 @@
     
   </div>
 
+  <footer class="footer">
+    <div class="content has-text-centered">
+        <a href="https://stuartteh1995.github.io/aio-travel-app/">Home</a>
+        <br>
+        <a href="https://github.com/Stuartteh1995/aio-travel-app" target="_blank" rel="noopener noreferrer">Github Repository</a>
+        <br>
+        <p>
+          Created by Edward Lui, Karun Thiyagarajah, Sanjay Chopra, and Stuart Teh
+        </p>
+    </div>
+  </footer>
+
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"
   integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
-<script src="script.js"></script>
+<script src="./Assets/JavaScript/script.js"></script>
 </body>
 
 </html>
