@@ -36,3 +36,7 @@
     background-size: cover;
     min-height: 500px;
   }
+  #restaurantHero {
+    background-image: url(background\ 2.jpg);  /* sets a background image */
+    height: 40vh;
+  }
