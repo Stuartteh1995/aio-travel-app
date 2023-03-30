@@ -36,3 +36,7 @@
     background-size: cover;
     min-height: 500px;
   }
+
+  .your-class::-webkit-input-placeholder {
+    color: #f75865
+}
