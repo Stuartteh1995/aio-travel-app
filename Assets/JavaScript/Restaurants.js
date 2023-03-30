@@ -23,9 +23,9 @@ for (i = 0; i < cityInfo.length; i++) {
     $("#weatherDisplay").append(cityDiv)
   }
 
-    var CurrentCityDiv = $("#currentCity")
-    var city =
-    var currentTempEl = displayData[0].temp
+   var CurrentCityDiv = $("#currentCity")
+    var city = 
+    var currentTempEl = displayData[0].temp;
     currentTemp.text("Current Temp:"+" "+ currentTempEl+" "+"°C")
     $("#currentCity").append(currentTemp)
      currentTemp.css({"text-align":"center","font-size":"40px", "font-weight":"500"})
