@@ -58,3 +58,67 @@
   .your-class::-webkit-input-placeholder {
     color: #f75865
 }
+#news-container h1 {
+  font-size: larger;
+  font-weight: bolder;
+  color: black;
+  margin-top: 40px;
+}
+
+#news-container h1:hover{
+  text-decoration: underline;
+  color:blue;
+}
+
+#news-container img{
+  margin:10px;
+  height: 300px;
+  width: 500px;
+  border-radius: 8px;
+}
+
+#news-container p {
+  color: black;
+}
+
+#news-container{
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+#convertHolder{
+  justify-content: center;
+  align-items: center;
+}
+
+#convertHolder h1{
+  color:black;
+  font-size: larger;
+  margin-bottom: 10px;
+
+}
+
+.convertFolder{
+  display: flex;
+  
+}
+
+.convertFolder > *{
+color:black;
+margin-left: 10px;
+}
+
+#convertHolder{
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+
+@media only screen and (max-width: 1030px) {
+  
+  .convertFolder {
+    flex-direction: column;
+    align-items: center;
+  }}
