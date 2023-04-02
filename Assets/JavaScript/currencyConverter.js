@@ -1,19 +1,27 @@
-var myHeaders = new Headers();
-myHeaders.append("apikey", "API KEY");
-// P2J0kMgUdhFNUcSKWcLchQW5mh8zYI9V
+$(document).ready(function() {
+  const apiKey = "";P2J0kMgUdhFNUcSKWcLchQW5mh8zYI9V
+  const apiUrl = "https://api.apilayer.com/exchangerates_data/convert";
+  
+  function getConversionRate(fromCurrency, toCurrency, amount) {
+    const url = `${apiUrl}?apikey=${apiKey}&from=${fromCurrency}&to=${toCurrency}&amount=${amount}`;
+    return fetch(url).then(response => response.json());
+  }
+  
+  function updateConversionRate() {
+    const fromCurrency = $("#currencyFrom").val();
+    const toCurrency = $("#currencyTo").val();
+    const amount = $("#value").val();
+    
+    if (fromCurrency && toCurrency && amount) {
+      getConversionRate(fromCurrency, toCurrency, amount)
+        .then(data => {
+          const convertedValue = data.result.toFixed(2);
+          $("#currencyOutput").val(convertedValue);
+        })
+        .catch(error => console.log(error));
+    }
+  }
+  
 
-var requestOptions = {
-  method: 'GET',
-  redirect: 'follow',
-  headers: myHeaders
-};
-
-// Replace the placeholders with actual values
-var fromCurrency = 'EUR';
-var toCurrency = 'AUD';
-var amount = 40;
-
-fetch(`https://api.apilayer.com/exchangerates_data/convert?to=${toCurrency}&from=${fromCurrency}&amount=${amount}`, requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+  $("#currencyFrom, #currencyTo, #value").on("change", updateConversionRate);
+});
