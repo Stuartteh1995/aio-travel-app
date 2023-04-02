@@ -29,13 +29,27 @@
     color: #fff
   }
 
-  #attBtn {
+  body {
 
-    background-image: url(background\ 1.jpg);
+    background-image: url(./Images/background1.jpg);
     background-position: center;
     background-size: cover;
-    min-height: 500px;
+    min-height: 100vh;
+    padding: 0 !important;
   }
+
+  #attBtn, #cityName , #addWeather {
+
+    padding: 0 !important;
+
+  }
+
+  #addWeather {
+
+    background-color: transparent!important;
+  }
+
+
   #restaurantHero {
     background-image: url(background\ 2.jpg);  /* sets a background image */
     height: 40vh;
