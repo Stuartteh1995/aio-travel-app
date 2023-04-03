@@ -1,18 +1,25 @@
 $(document).ready(function(){
-    $("#btnStart").click(function(event){
-        event.preventDefault()
+   // Eventlistener to start fetching weather data
+  $("#btnStart").click(function(event){
+       // to prevent page refresh on click 
+    event.preventDefault()
+    // to empty divs to be ready for new weather info
         $("#addWeather").empty()
         $("#cityName").empty()
+    // decalaring  variables for the fetch function
         var cityWeather = []
         var index = 0
         var weatherForecast = []
+        // Recieving city name from the input on click
         var El = $("#cityEl").val();
+        // if empty show warning in red
         if (!El){
           $("#cityEl").attr("placeholder","Please enter name of the city")
           $("input").addClass("your-class")
       return;
      }
-        fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + El + "&limit=5&units=metric&appid=7ceb463b0dbb74278996f51113e27ee3", {
+       // fetch city weather from openwaethermap
+     fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + El + "&limit=5&units=metric&appid=7ceb463b0dbb74278996f51113e27ee3", {
           method: 'GET',
           redirect: 'follow',
         })
@@ -22,12 +29,12 @@ $(document).ready(function(){
     
           .then(function (data) {
             cityWeather.push(data);
-            console.log(cityWeather);
+            // printing city name on the html page
             var namePara = $("<div></div>")
             namePara.css({"text-align":"center","font-size":"60px", "font-weight":"700"})
             namePara.text(El.toUpperCase())
             $("#cityName").append(namePara)
-    
+    // for loop to pull 5 days weather forecast
             for (i = 0; i < 5; i++) {
                 var temp = cityWeather[0].list[index].main.temp
                 var maxTemp = cityWeather[0].list[index].main.temp_max
@@ -37,10 +44,11 @@ $(document).ready(function(){
                 var icon = cityWeather[0].list[index].weather[0].icon;
                 weatherForecast.push({ "temp": temp, "city": city, "date": date, "icon": icon, "maxTemp": maxTemp });
                 index += 8;
+                //setting local storage with weather data
                 localStorage.setItem("forecastNew", JSON.stringify(weatherForecast));
                 console.log(weatherForecast);
               }
-    
+    // creating history buttons
             var myBtn = $("<button></button>")
             var ElUpper = El.toUpperCase()
             myBtn.text(ElUpper)
@@ -48,7 +56,7 @@ $(document).ready(function(){
             myBtn.attr("id", El);
             myBtn.css("width", "200px")
             myBtn.attr("class", "button is-info is-outlined m-2 cityBtn")
-    
+    // retrieval of weather dat from local storage to display on html
             var displayData = JSON.parse(localStorage.getItem("forecastNew"));
             var currentTemp = $("<div></div>")
             var currentTempEl = displayData[0].temp
@@ -90,13 +98,13 @@ $(document).ready(function(){
     
     
     
-         //     New Start
+    // event listener for history buttons   
     
       $("#attBtn").click(function (event) {
         var buttonClicked = event.target
+        // on clicking button retrieve name of the city to fetch weather data
         if (buttonClicked.matches(".cityBtn")){
           console.log("button")
-        //event.stopPropagation()
         var abc = event.target.id
         var cityWeather = []
         var index = 0
@@ -112,19 +120,16 @@ $(document).ready(function(){
           .then(function (data) {
     
             cityWeather.push(data);
-            console.log(cityWeather);
-    
-    
-            //              Latest                 //
+            // empty divs before displaying dat on html
             $("#addWeather").empty()
             $("#cityName").empty()
-          
+          // Display name of the city on html
             var El = $(buttonClicked).text()
             var namePara = $("<div></div>")
             namePara.css({"text-align":"center","font-size":"60px", "font-weight":"700"})
             namePara.text(El.toUpperCase())
             $("#cityName").append(namePara)
-    
+    // for loop to generate 5 days forecat and local storage
     
             for (i = 0; i < 5; i++) {
                 var temp = cityWeather[0].list[index].main.temp
@@ -138,6 +143,7 @@ $(document).ready(function(){
                 localStorage.setItem("forecastNew", JSON.stringify(weatherForecast));
                 console.log(weatherForecast);
               }
+              // retrieval of local storage to display weather info on html
               var displayData = JSON.parse(localStorage.getItem("forecastNew"));
               var currentTemp = $("<div></div>")
               var currentTempEl = displayData[0].temp
@@ -166,14 +172,13 @@ $(document).ready(function(){
                 $(cityDiv).append(tempPara)
                 $(cityDiv).css({"border":"2px black solid", "border-radius":"4px", "box-shadow":"3px 3px 4px grey", "margin":"5px", "background-image": "linear-gradient(to left bottom, #a87def, #ff71b7, #ff8c7a, #f5b85d, #c0df7c)", "font-size":"24px", "font-weight":"400"})
                 $("#addWeather").append(cityDiv)
+                // stop propogation of click event
                 event.stopPropagation()
               }
-    
             
           })
+          
         }
-    
-    
     
       })
     
