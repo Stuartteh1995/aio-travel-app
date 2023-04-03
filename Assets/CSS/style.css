@@ -58,6 +58,8 @@
   .your-class::-webkit-input-placeholder {
     color: #f75865
 }
+
+/* news css */
 #news-container h1 {
   font-size: larger;
   font-weight: bolder;
@@ -87,6 +89,7 @@
   overflow: hidden;
 }
 
+/* currency converter css */
 #convertHolder{
   justify-content: center;
   align-items: center;
