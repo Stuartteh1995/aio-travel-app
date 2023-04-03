@@ -50,6 +50,7 @@
           <h1>Currency Converter</h1>
           <div class="convertFolder">
             <p class="convertItem">Convert</p>
+            <!-- creating a drop down list of all the currency that can be used by the api to convert -->
                 <select name='currencies' id="currencyFrom">
                     <option value='AED' title='United Arab Emirates Dirham'>AED</option>
                     <option value='AFN' title='Afghan Afghani'>AFN</option>
@@ -224,10 +225,11 @@
                
                  </select>
                
+                 <!-- create a input that only accepts numbers and that users can increase domination by 1 -->
                 <input type="number" id="value" placeholder="amount" min="0" step="1">
                 <p>to</p>
                 
-              
+              <!-- creating a drop down list of all the currency that can be used by the api to convert -->
                 <select name='currencies' id="currencyTo">
                     <option value='AED' title='United Arab Emirates Dirham'>AED</option>
                     <option value='AFN' title='Afghan Afghani'>AFN</option>
@@ -400,7 +402,7 @@
                     <option value='ZWL' title='Zimbabwean Dollar'>ZWL</option>
                    
                  </select>
-            
+            <!-- Create an input box that is a read me only and displays the value after converstion -->
                  <input type="text" id="currencyOutput" value="" readonly>
                 </div>
             </div>
