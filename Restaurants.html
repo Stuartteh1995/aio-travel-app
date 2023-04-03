@@ -7,87 +7,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Restaurants</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./Assets/CSS/style.css">
 </head>
 
 <body>
-
-  <div class="columns has-background-primary p-3">
-    <div class="column is-one-fifth has-background-primary is-align-self-center">
-      <figure class="image is-48x48">
-        <img class="is-rounded" src="AIO.png">
-      </figure>
-    </div>
-
-    <div class= "column is-four-fifth" ID ="currentCity">
-
-    </div>
-
-  <!--
-    <div class="column is-two-fifths  is-info has-background-primary is-align-self-center">
-      <input class="input is-rounded" id="cityEl" type="text"
-        placeholder="Enter City...">
-    </div>
-    <div class="column is-one-fifth has-background-primary is-align-self-center">
-      <div class="buttons">
-        <button class="button is-info" id ="btnStart">Check Weather</button>
-      </div>
-
-    </div> -->
-    <!----- Drop Down using CSS  -->
-    <div class="column is-one-fifth has-background-primary is-align-self-center">
-      <div class="buttons">
-
-        <div class="dropdown">
-          
-          <button class="button is-fullwidth is-info">Choose Service
-
-          </button>
-        
-          <button class="button is-info">Choose Service
-
-          </button>
-          
-          <div class="dropdown-content">
-            <p><a href="https://www.google.com" target="_blank">Restaurants</a></p>
-            <p><a href="https://www.google.com" target="_blank">Transportation</a></p>
-            <p><a href="https://www.google.com" target="_blank">Hotels</a></p>
-            <p><a href="https://www.google.com" target="_blank">Places of Interest</a></p>
-          </div>
+    
+  <header>
+    <nav class="navbar has-shadow is-info">
+        <!-- logo / brand -->
+        <div class="navbar-brand">
+            <a class="navbar-item" href="./index.html">
+                <img src="./Assets/Images/AIOlogo.png" alt="site logo" style="max-height: 70px">
+            </a>
         </div>
-      </div>
-    </div> 
-   
+        <!-- navbar items-->
+        <div class="navbar-menu" id="nav-links">
+            <div class="navbar-start">
+                <a class="navbar-item" href="./index.html">
+                    Home
+                </a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">Choose Service</a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="https://www.google.com" target="_blank">
+                          Restaurants
+                        </a>
+                        <a class="navbar-item" href="https://www.google.com" target="_blank">
+                          Transportation
+                        </a>
+                        <a class="navbar-item" href="https://www.google.com" target="_blank">
+                          Hotels
+                        </a>
+                        <a class="navbar-item" href="https://www.google.com" target="_blank">
+                            Places of Interest
+                        </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+  </header>
+  <!--for content-->
+  <section class="section">
 
-  </div>
-<!----------------Section to append history buttons------------>
-  <section class="section container" id="restaurantHero">
-    
-  </section>
-
-  <!-------      Adding name of the City ------->
-  <section class="section" id="cityName">
-    
-  </section>
-   <!------- For content --->
-   <Section class="container">
     <div class="columns">
-      <div class ="column is-three-quarters">
-        <h1> Restaurants</h1>
-        <h1> Restaurants</h1>
-        <h1> Restaurants</h1>
-      </div>
+          <!--for restaurant info-->
+        <div class="column is-three-fifths has-background-info mx-5" ID="restDiv">
+          
+        </div>
+       
+        <!--for weather info-->
+        <div class="column has-background-primary mx-5" ID ="cityDiv">
 
-      <div class="column is-one-quarter has-background-info-light p-3 has-text-centered" id="weatherDisplay">
-    
-      </div>
+        </div>
     </div>
-  </Section>
+  </section>
+  
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+        <a href="https://stuartteh1995.github.io/aio-travel-app/">Home</a>
+        <br>
+        <a href="https://github.com/Stuartteh1995/aio-travel-app" target="_blank" rel="noopener noreferrer">Github Repository</a>
+        <br>
+        <p>
+          Created by Edward Lui, Karun Thiyagarajah, Sanjay Chopra, and Stuart Teh
+        </p>
+    </div>
+  </footer>
 
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"
   integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
-<script src="restaurants.js"></script>
+<script src="./Assets/JavaScript/Restaurants.js"></script>
 </body>
 
 </html>
