@@ -1,7 +1,7 @@
-//                        Sydney                 //
+//          Fetch function for Sydney
 var sydW = []
 var sydForecast= []
-index = 0
+indexS = 0
 fetch("https://api.openweathermap.org/data/2.5/forecast?q=sydney&limit=5&units=metric&appid=7ceb463b0dbb74278996f51113e27ee3", {
       method: 'GET',
       redirect: 'follow',
@@ -14,14 +14,14 @@ fetch("https://api.openweathermap.org/data/2.5/forecast?q=sydney&limit=5&units=m
     
         sydW.push(data1)
         for (i = 0; i < 5; i++) {
-            var temp = sydW[0].list[index].main.temp
-            var maxTemp = sydW[0].list[index].main.temp_max
+            var temp = sydW[0].list[indexS].main.temp
+            var maxTemp = sydW[0].list[indexS].main.temp_max
             var city = sydW[0].city.name
-            var rawDate = dayjs.unix(sydW[0].list[index].dt)
+            var rawDate = dayjs.unix(sydW[0].list[indexS].dt)
             var date = rawDate.format("MMM D, YYYY");
-            var icon = sydW[0].list[index].weather[0].icon;
+            var icon = sydW[0].list[indexS].weather[0].icon;
            sydForecast.push({ "temp": temp, "name": city, "date": date, "icon": icon, "maxTemp": maxTemp });
-            index += 8;
+            indexS += 8;
             localStorage.setItem("sydForecast", JSON.stringify(sydForecast));
             console.log(sydForecast);
       }
@@ -45,10 +45,10 @@ fetch("https://api.openweathermap.org/data/2.5/forecast?q=sydney&limit=5&units=m
             $(nameDiv).prepend(imgPara)
             $(nameDiv).css({"background-image": "linear-gradient(to right top, #ccc1e5, #b2a3de, #9787d6, #786bcf, #5351c7)","font-size":"24px","border":"2px solid black","border-radius":"15px","box-shadow":"4px 4px 6px grey"})
             $("#heroCity").append(nameDiv)
-//                        Melbourne                 //
+//             Fetch function for Melbourne
 var melW = []
 var melForecast= []
-index = 0
+indexM = 0
 fetch("https://api.openweathermap.org/data/2.5/forecast?q=melbourne,au&limit=5&units=metric&appid=7ceb463b0dbb74278996f51113e27ee3", {
       method: 'GET',
       redirect: 'follow',
@@ -61,14 +61,14 @@ fetch("https://api.openweathermap.org/data/2.5/forecast?q=melbourne,au&limit=5&u
     
         melW.push(data2)
         for (i = 0; i < 5; i++) {
-            var temp = melW[0].list[index].main.temp
-            var maxTemp = melW[0].list[index].main.temp_max
+            var temp = melW[0].list[indexM].main.temp
+            var maxTemp = melW[0].list[indexM].main.temp_max
             var city = melW[0].city.name
-            var rawDate = dayjs.unix(melW[0].list[index].dt)
+            var rawDate = dayjs.unix(melW[0].list[indexM].dt)
             var date = rawDate.format("MMM D, YYYY");
-            var icon = melW[0].list[index].weather[0].icon;
+            var icon = melW[0].list[indexM].weather[0].icon;
            melForecast.push({ "temp": temp, "name": city, "date": date, "icon": icon, "maxTemp": maxTemp });
-            index += 8;
+            indexM += 8;
             localStorage.setItem("melForecast", JSON.stringify(melForecast));
             console.log(melForecast);
       }
@@ -92,10 +92,10 @@ fetch("https://api.openweathermap.org/data/2.5/forecast?q=melbourne,au&limit=5&u
             $(nameDiv).prepend(imgPara)
             $(nameDiv).css({"background-image": "linear-gradient(to right top, #ccc1e5, #b2a3de, #9787d6, #786bcf, #5351c7)","font-size":"24px","border":"2px solid black","border-radius":"15px","box-shadow":"4px 4px 6px grey"})
             $("#heroCity").append(nameDiv)
-//                    London                //
+//              Fetch Function for london
 var lonW = []
 var lonForecast= []
-index = 0
+indexL = 0
 fetch("https://api.openweathermap.org/data/2.5/forecast?q=london&limit=5&units=metric&appid=7ceb463b0dbb74278996f51113e27ee3", {
       method: 'GET',
       redirect: 'follow',
@@ -109,14 +109,14 @@ fetch("https://api.openweathermap.org/data/2.5/forecast?q=london&limit=5&units=m
         lonW.push(data)
         console.log(lonW)
         for (i = 0; i < 5; i++) {
-            var temp = lonW[0].list[index].main.temp
-            var maxTemp = londW[0].list[index].main.temp_max
+            var temp = lonW[0].list[indexL].main.temp
+            var maxTemp = lonW[0].list[indexL].main.temp_max
             var city = lonW[0].city.name
-            var rawDate = dayjs.unix(lonW[0].list[index].dt)
+            var rawDate = dayjs.unix(lonW[0].list[indexL].dt)
             var date = rawDate.format("MMM D, YYYY");
-            var icon = lonW[0].list[index].weather[0].icon;
+            var icon = lonW[0].list[indexL].weather[0].icon;
            lonForecast.push({ "temp": temp, "name": city, "date": date, "icon": icon, "maxTemp": maxTemp });
-            index += 8;
+            indexL += 8;
             localStorage.setItem("lonForecast", JSON.stringify(lonForecast));
             console.log(lonForecast);
       }

@@ -1,17 +1,25 @@
+//retreieve city from local storage
 var retrievedData = JSON.parse(localStorage.getItem("forecastNew"));
 var retrievedCity = retrievedData[0].city;
+//how many news artical to display
 const newsSize = 6;
+//link to the api
 const url = `https://content.guardianapis.com/search?q=${retrievedCity}&page-size=${newsSize}&show-fields=thumbnail,headline,body&api-key=b45f8002-57f1-4fa0-a558-f0c18a87e9fa`;
 
 fetch(url)
+//send url out and get the responds as a json
   .then(response => response.json())
   .then(data => {
+    //create a variable for the contrainer in html that would hold the news article
     const newsContainer = document.getElementById('news-container');
+    //gets the data from local storage
     const articles = data.response.results;
 
+    //creating a for each loop to display news article 
     articles.forEach(article => {
       const newsUrl = article.webUrl;
 
+      //create a hyper link that is attached to the article and adds it to the html
       const titleLink = document.createElement('a');
       titleLink.href = newsUrl;
       titleLink.target = '_blank';
@@ -20,6 +28,7 @@ fetch(url)
       titleLink.appendChild(title);
       newsContainer.appendChild(titleLink);
 
+      //gets the image link and displays it as a thumbnail
       if (article.fields && article.fields.thumbnail) {
         const newsImage = document.createElement("img");
         newsImage.src = article.fields.thumbnail;
@@ -31,6 +40,7 @@ fetch(url)
         titleLink.target = '_blank';
       }
 
+      // create the description 
       const description = document.createElement('p');
       if (article.fields && article.fields.headline) {
         description.innerHTML = article.fields.headline;

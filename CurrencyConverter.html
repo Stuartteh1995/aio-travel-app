@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>template **CHANGE**</title>
+  <title>Currency Converter</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="./Assets/CSS/style.css">
 </head>
@@ -26,23 +26,20 @@
                 <a class="navbar-item" href="./index.html">
                     Home
                 </a>
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">Choose Service</a>
-                    <div class="navbar-dropdown">
-                        <a class="navbar-item" href="https://www.google.com" target="_blank">
-                          Restaurants
-                        </a>
-                        <a class="navbar-item" href="https://www.google.com" target="_blank">
-                          Transportation
-                        </a>
-                        <a class="navbar-item" href="https://www.google.com" target="_blank">
-                          Hotels
-                        </a>
-                        <a class="navbar-item" href="https://www.google.com" target="_blank">
-                            Places of Interest
-                        </a>
-                </div>
             </div>
+            <div class="navbar-item has-dropdown is-hoverable navbar-end">
+              <a class="navbar-link">Choose Service</a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item" href="./Restaurants.html" target="_blank">
+                  Restaurants
+                </a>
+                <a class="navbar-item" href="./LocalNews.html" target="_blank">
+                  Local News
+                </a>
+                <a class="navbar-item" href="./CurrencyConverter.html" target="_blank">
+                  Currency Converter
+                </a>
+              </div>
         </div>
     </nav>
   </header>
@@ -53,6 +50,7 @@
           <h1>Currency Converter</h1>
           <div class="convertFolder">
             <p class="convertItem">Convert</p>
+            <!-- creating a drop down list of all the currency that can be used by the api to convert -->
                 <select name='currencies' id="currencyFrom">
                     <option value='AED' title='United Arab Emirates Dirham'>AED</option>
                     <option value='AFN' title='Afghan Afghani'>AFN</option>
@@ -227,10 +225,11 @@
                
                  </select>
                
+                 <!-- create a input that only accepts numbers and that users can increase domination by 1 -->
                 <input type="number" id="value" placeholder="amount" min="0" step="1">
                 <p>to</p>
                 
-              
+              <!-- creating a drop down list of all the currency that can be used by the api to convert -->
                 <select name='currencies' id="currencyTo">
                     <option value='AED' title='United Arab Emirates Dirham'>AED</option>
                     <option value='AFN' title='Afghan Afghani'>AFN</option>
@@ -403,7 +402,7 @@
                     <option value='ZWL' title='Zimbabwean Dollar'>ZWL</option>
                    
                  </select>
-            
+            <!-- Create an input box that is a read me only and displays the value after converstion -->
                  <input type="text" id="currencyOutput" value="" readonly>
                 </div>
             </div>
