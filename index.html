@@ -11,55 +11,48 @@
 </head>
 
 <body>
-
-  <div class="columns has-background-link-dark p-3">
-    <div class="column is-one-fifth has-background-link-dark is-align-self-center">
-      <figure class="image is-48x48">
-        <img src="./Assets/Images/AIOlogo.png">
-      </figure>
-
-      
-
-    </div>
-
-    <div class="column is-two-fifths  is-info has-background-link-dark is-align-self-center">
-      <input class="input is-rounded" id="cityEl" type="text"
-        placeholder="Enter City...">
-    </div>
-    <div class="column is-one-fifth has-background-link-dark is-align-self-center">
-      <div class="buttons">
-        <button class="button is-info" id ="btnStart">Check Weather</button>
-      </div>
-
-    </div>
-    <!----- Drop Down using CSS  -->
-    <div class="column is-one-fifth has-background-link-dark is-align-self-center">
-      <div class="buttons">
-
-        <div class="dropdown">
-          
-          <button class="button is-fullwidth is-info">Choose Service
-
-          </button>
-        <!----  
-          <button class="button is-info">Choose Service
-
-          </button>
-          --->
-          <div class="dropdown-content">
-            <p><a href="https://www.google.com" target="_blank">Restaurants</a></p>
-            <p><a href="https://www.google.com" target="_blank">Transportation</a></p>
-            <p><a href="https://www.google.com" target="_blank">Hotels</a></p>
-            <p><a href="https://www.google.com" target="_blank">Places of Interest</a></p>
+  <header>
+    <nav class="navbar has-shadow is-info">
+        <!-- logo / brand -->
+        <div class="navbar-brand">
+            <a class="navbar-item" href="./index.html">
+                <img src="./Assets/Images/AIOlogo.png" alt="site logo" style="max-height: 70px">
+            </a>
+        </div>
+        <!-- navbar items-->
+        <div class="navbar-menu" id="nav-links">
+            <div class="navbar-start">
+                <a class="navbar-item" href="./index.html">
+                    Home
+                </a>
+                <div class="navbar-item ml-6">
+                  <input class="input is-rounded" id="cityEl" type="text" placeholder="Enter City..." size="50">
+                </div>
+                <div class="navbar-item">
+                  <div class="buttons">
+                    <button class="button is-link" id ="btnStart">Check Weather</button>
+                  </div>
+                </div>
+            </div>
+            <div class="navbar-item has-dropdown is-hoverable navbar-end">
+              <a class="navbar-link">Choose Service</a>
+              <div class="navbar-dropdown" id="btnStart">
+                  <a class="navbar-item" href="./Restaurants.html" target="_blank">
+                    Restaurants
+                  </a>
+                  <a class="navbar-item" href="./LocalNews.html" target="_blank">
+                    Local News
+                  </a>
+                  <a class="navbar-item" href="./CurrencyConverter.html" target="_blank">
+                    Currency Converter
+                  </a>
           </div>
         </div>
-      </div>
-    </div>
-  
-  </div>
+    </nav>
+  </header>
 
   <!----------- Section to add Cities -------->
-  <div class="columns has-text-centered" id="heroCity">
+  <div class="columns has-text-centered mt-4" id="heroCity" >
   
   </div>
 <!----------------Section to append history buttons------------>
@@ -78,7 +71,7 @@
   </div>
 
   <footer class="footer">
-    <div class="content has-text-centered">
+    <div class="content has-text-centered is-flex-align-items-flex-end mt-auto">
         <a href="https://stuartteh1995.github.io/aio-travel-app/">Home</a>
         <br>
         <a href="https://github.com/Stuartteh1995/aio-travel-app" target="_blank" rel="noopener noreferrer">Github Repository</a>
