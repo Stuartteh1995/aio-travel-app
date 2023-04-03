@@ -1,9 +1,8 @@
-
 // to get the city info stored in the local storage by the home page
 var cityInfo = JSON.parse(localStorage.getItem("forecastNew"));
 console.log(cityInfo);
 
-// to fetch a list of restaurants from the Yelp API
+// to set parameters to get a list of 5 businesses from the Yelp API
 const city = cityInfo[0].city;
 const proxyUrl = "https://cors-anywhere.herokuapp.com/";
 const targetUrl =
@@ -18,6 +17,7 @@ const options = {
   },
 };
 
+//To fetch the business information - thanks Sid for the help with the fetch loading before the bage.
 async function fetchRestaurants() {
   try {
     const response = await fetch(proxyUrl + targetUrl, options);
@@ -61,11 +61,12 @@ async function fetchRestaurants() {
 }
 
 fetchRestaurants();
-  //to display weather
+
+
+  //to display weather from data locally stored by index.html
   for (i = 0; i < cityInfo.length; i++) {
     var infoW= $('<div>');
-    $(infoW).addClass('columns').css({"border-bottom":"1px black solid",
-    "margin":"3px"});
+    $(infoW).addClass('columns').css({"margin":"3px"});
     $('#cityDiv').append(infoW);
     var wDiv =$('<div>');
     $(wDiv).addClass('column');
@@ -85,20 +86,8 @@ fetchRestaurants();
     $(wDiv).append(img, datePara, maxTempPara, tempPara);
     $(wDiv).css({"margin":"5px", 
     "background-color":"light", 
+    "background-image": "linear-gradient(to left bottom, #a87def, #ff71b7, #ff8c7a, #f5b85d, #c0df7c)",
     "font-size":"16px","text-align":"center", 
+    "border":"2px black solid", "border-radius":"4px", "box-shadow":"3px 3px 4px grey",
     "font-weight":"400"})
   }
-//});  
-
-/* to display city info at the top
-
-    var currentC = $('#currentC');
-    currentC.text(cityInfo[0].city).css('text-transform', 'uppercase');
-    var currentT = $('#currentT');
-    currentT.text(cityInfo[0].temp +"°C").css('text-transform', 'uppercase');
-    console.log(currentT);
-    var currentI = $("#currentI");
-    currentI.attr('src', 'https://openweathermap.org/img/wn/'+cityInfo[0].icon+'@2x.png').css({'width': '50px', 'height': '50px'})
-    
-
-  */
