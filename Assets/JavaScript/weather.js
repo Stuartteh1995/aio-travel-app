@@ -1,4 +1,4 @@
-//                        Sydney                 //
+//          Fetch function for Sydney
 var sydW = []
 var sydForecast= []
 indexS = 0
@@ -45,7 +45,7 @@ fetch("https://api.openweathermap.org/data/2.5/forecast?q=sydney&limit=5&units=m
             $(nameDiv).prepend(imgPara)
             $(nameDiv).css({"background-image": "linear-gradient(to right top, #ccc1e5, #b2a3de, #9787d6, #786bcf, #5351c7)","font-size":"24px","border":"2px solid black","border-radius":"15px","box-shadow":"4px 4px 6px grey"})
             $("#heroCity").append(nameDiv)
-//                        Melbourne                 //
+//             Fetch function for Melbourne
 var melW = []
 var melForecast= []
 indexM = 0
@@ -92,7 +92,7 @@ fetch("https://api.openweathermap.org/data/2.5/forecast?q=melbourne,au&limit=5&u
             $(nameDiv).prepend(imgPara)
             $(nameDiv).css({"background-image": "linear-gradient(to right top, #ccc1e5, #b2a3de, #9787d6, #786bcf, #5351c7)","font-size":"24px","border":"2px solid black","border-radius":"15px","box-shadow":"4px 4px 6px grey"})
             $("#heroCity").append(nameDiv)
-//                    London                //
+//              Fetch Function for london
 var lonW = []
 var lonForecast= []
 indexL = 0
