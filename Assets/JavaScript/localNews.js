@@ -1,7 +1,7 @@
-const retrievedCity = localStorage.getItem('city');
-const searchTerm = retrievedCity;
-const newsSize = 5;
-const url = `https://content.guardianapis.com/search?q=${searchTerm}&page-size=${newsSize}&show-fields=thumbnail,headline,body&api-key=b45f8002-57f1-4fa0-a558-f0c18a87e9fa`;
+var retrievedData = JSON.parse(localStorage.getItem("forecastNew"));
+var retrievedCity = retrievedData[0].city;
+const newsSize = 6;
+const url = `https://content.guardianapis.com/search?q=${retrievedCity}&page-size=${newsSize}&show-fields=thumbnail,headline,body&api-key=b45f8002-57f1-4fa0-a558-f0c18a87e9fa`;
 
 fetch(url)
   .then(response => response.json())
@@ -25,6 +25,10 @@ fetch(url)
         newsImage.src = article.fields.thumbnail;
         newsImage.alt = 'No image';
         newsContainer.appendChild(newsImage);
+        const newsUrl = article.webUrl;
+        const titleLink = document.createElement('a');
+        titleLink.href = newsUrl;
+        titleLink.target = '_blank';
       }
 
       const description = document.createElement('p');
