@@ -43,7 +43,10 @@ fetch("https://api.openweathermap.org/data/2.5/forecast?q=sydney&limit=5&units=m
            $(imgPara).attr("src", 'https://openweathermap.org/img/wn/'+imgEl+'@2x.png')
            imgPara.css({"width":"50px","height":"50px","float":"left"})
             $(nameDiv).prepend(imgPara)
-            $(nameDiv).css({"background-image": "linear-gradient(to right top, #ccc1e5, #b2a3de, #9787d6, #786bcf, #5351c7)","font-size":"24px","border":"2px solid black","border-radius":"15px","box-shadow":"4px 4px 6px grey"})
+            $(nameDiv).css({"background-color":"light", 
+            "font-size":"16px","text-align":"center", 
+            "border":"2px grey solid", "border-radius":"4px", "box-shadow":"3px 3px 4px grey",
+            "font-weight":"400"})
             $("#heroCity").append(nameDiv)
 //             Fetch function for Melbourne
 var melW = []
@@ -90,7 +93,10 @@ fetch("https://api.openweathermap.org/data/2.5/forecast?q=melbourne,au&limit=5&u
            $(imgPara).attr("src", 'https://openweathermap.org/img/wn/'+imgEl+'@2x.png')
            imgPara.css({"width":"50px","height":"50px","float":"left"})
             $(nameDiv).prepend(imgPara)
-            $(nameDiv).css({"background-image": "linear-gradient(to right top, #ccc1e5, #b2a3de, #9787d6, #786bcf, #5351c7)","font-size":"24px","border":"2px solid black","border-radius":"15px","box-shadow":"4px 4px 6px grey"})
+            $(nameDiv).css({"background-color":"light", 
+            "font-size":"16px","text-align":"center", 
+            "border":"2px grey solid", "border-radius":"4px", "box-shadow":"3px 3px 4px grey",
+            "font-weight":"400"})
             $("#heroCity").append(nameDiv)
 //              Fetch Function for london
 var lonW = []
@@ -138,5 +144,8 @@ fetch("https://api.openweathermap.org/data/2.5/forecast?q=london&limit=5&units=m
            $(imgPara).attr("src", 'https://openweathermap.org/img/wn/'+imgEl+'@2x.png')
            imgPara.css({"width":"50px","height":"50px","float":"left"})
             $(nameDiv).prepend(imgPara)
-            $(nameDiv).css({"background-image": "linear-gradient(to right top, #ccc1e5, #b2a3de, #9787d6, #786bcf, #5351c7)","font-size":"24px","border":"2px solid black","border-radius":"15px","box-shadow":"4px 4px 6px grey"})
+            $(nameDiv).css({"background-color":"light", 
+            "font-size":"16px","text-align":"center", 
+            "border":"2px grey solid", "border-radius":"4px", "box-shadow":"3px 3px 4px grey",
+            "font-weight":"400"})
             $("#heroCity").append(nameDiv)

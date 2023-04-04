@@ -30,7 +30,11 @@ async function fetchRestaurants() {
       var infoR = $("<div>");
       $(infoR)
         .addClass("columns is-fullwidth")
-        .css({ "border-bottom": "1px black solid", margin: "3px" });
+        .css({ "margin":"13px", 
+        "background-color":"light", 
+        "font-size":"16px","text-align":"center", 
+        "border":"2px grey solid", "border-radius":"4px", "box-shadow":"3px 3px 4px grey",
+        "font-weight":"400", "padding":"11px"});
       $("#restDiv").append(infoR);
       var imgDiv = $("<div>");
       $(imgDiv).addClass("column is-4");
@@ -66,7 +70,7 @@ fetchRestaurants();
   //to display weather from data locally stored by index.html
   for (i = 0; i < cityInfo.length; i++) {
     var infoW= $('<div>');
-    $(infoW).addClass('columns').css({"margin":"3px"});
+    $(infoW).addClass('columns').css({"margin":"13px"});
     $('#cityDiv').append(infoW);
     var wDiv =$('<div>');
     $(wDiv).addClass('column');
@@ -84,10 +88,9 @@ fetchRestaurants();
     tempPara.text(tempDis+"°C ")
     $(infoW).append(wDiv);
     $(wDiv).append(img, datePara, maxTempPara, tempPara);
-    $(wDiv).css({"margin":"5px", 
+    $(wDiv).css({ 
     "background-color":"light", 
-    "background-image": "linear-gradient(to left bottom, #a87def, #ff71b7, #ff8c7a, #f5b85d, #c0df7c)",
     "font-size":"16px","text-align":"center", 
-    "border":"2px black solid", "border-radius":"4px", "box-shadow":"3px 3px 4px grey",
+    "border":"2px grey solid", "border-radius":"4px", "box-shadow":"3px 3px 4px grey",
     "font-weight":"400"})
   }

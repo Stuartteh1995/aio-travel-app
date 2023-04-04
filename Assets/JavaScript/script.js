@@ -18,7 +18,7 @@ $(document).ready(function(){
           $("input").addClass("your-class")
       return;
      }
-       // fetch city weather from openwaethermap
+       // fetch city weather from openwweathermap
      fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + El + "&limit=5&units=metric&appid=7ceb463b0dbb74278996f51113e27ee3", {
           method: 'GET',
           redirect: 'follow',
@@ -83,7 +83,10 @@ $(document).ready(function(){
               var tempDis = displayData[i].temp
               tempPara.text(tempDis+"°C ")
               $(cityDiv).append(tempPara)
-              $(cityDiv).css({"border":"2px black solid", "border-radius":"4px", "box-shadow":"3px 3px 4px grey", "margin":"5px", "background-image": "linear-gradient(to left bottom, #a87def, #ff71b7, #ff8c7a, #f5b85d, #c0df7c)", "font-size":"24px", "font-weight":"400"})
+              $(cityDiv).css({"background-color":"light", 
+              "font-size":"16px","text-align":"center", 
+              "border":"2px grey solid", "border-radius":"4px", "box-shadow":"3px 3px 4px grey",
+              "font-weight":"400"})
               $("#addWeather").append(cityDiv)
             }
     
@@ -170,7 +173,7 @@ $(document).ready(function(){
                 var tempDis = displayData[i].temp
                 tempPara.text(tempDis+"°C ")
                 $(cityDiv).append(tempPara)
-                $(cityDiv).css({"border":"2px black solid", "border-radius":"4px", "box-shadow":"3px 3px 4px grey", "margin":"5px", "background-image": "linear-gradient(to left bottom, #a87def, #ff71b7, #ff8c7a, #f5b85d, #c0df7c)", "font-size":"24px", "font-weight":"400"})
+                $(cityDiv).css({"border":"2px black solid", "font-size":"24px", "font-weight":"400"})
                 $("#addWeather").append(cityDiv)
                 // stop propogation of click event
                 event.stopPropagation()
@@ -184,3 +187,11 @@ $(document).ready(function(){
     
     })
     
+
+// mobile menu
+var burgerIcon = document.querySelector('#burger');
+var navbarMenu = document.querySelector('#nav-links');
+
+burgerIcon.addEventListener('click', () => {
+  navbarMenu.classList.toggle('is-active')
+});

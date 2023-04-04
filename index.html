@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -13,81 +12,103 @@
 <body>
   <header>
     <nav class="navbar has-shadow is-info">
-        <!-- logo / brand -->
-        <div class="navbar-brand">
-            <a class="navbar-item" href="./index.html">
-                <img src="./Assets/Images/AIOlogo.png" alt="site logo" style="max-height: 70px">
-            </a>
-        </div>
-        <!-- navbar items-->
-        <div class="navbar-menu" id="nav-links">
-            <div class="navbar-start">
-                <a class="navbar-item" href="./index.html">
-                    Home
-                </a>
-                <div class="navbar-item ml-6">
-                  <input class="input is-rounded" id="cityEl" type="text" placeholder="Enter City..." size="50">
-                </div>
-                <div class="navbar-item">
-                  <div class="buttons">
-                    <button class="button is-link" id ="btnStart">Check Weather</button>
-                  </div>
-                </div>
+      <!-- logo / brand -->
+      <div class="navbar-brand">
+        <a class="navbar-item" href="./index.html">
+          <img src="./Assets/Images/AIOlogo.png" alt="site logo" style="max-height: 70px">
+        </a>
+        <a class="navbar-burger" id="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+      <!-- navbar items-->
+      <div class="navbar-menu" id="nav-links">
+        <div class="navbar-start">
+          <a class="navbar-item" href="./index.html">
+            Home
+          </a>
+          <div class="navbar-item ml-6">
+            <input class="input is-rounded" id="cityEl" type="text" placeholder="Enter City..." size="50">
+          </div>
+          <div class="navbar-item">
+            <div class="buttons">
+              <button class="button is-link" id="btnStart">Search</button>
             </div>
-            <div class="navbar-item has-dropdown is-hoverable navbar-end">
-              <a class="navbar-link">Choose Service</a>
-              <div class="navbar-dropdown" id="btnStart">
-                  <a class="navbar-item" href="./Restaurants.html" target="_blank">
-                    Restaurants
-                  </a>
-                  <a class="navbar-item" href="./LocalNews.html" target="_blank">
-                    Local News
-                  </a>
-                  <a class="navbar-item" href="./CurrencyConverter.html" target="_blank">
-                    Currency Converter
-                  </a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable navbar-end">
+          <a class="navbar-link">Choose Service</a>
+          <div class="navbar-dropdown" id="btnStart">
+            <a class="navbar-item" href="./Restaurants.html" target="_blank">
+              Restaurants
+            </a>
+            <a class="navbar-item" href="./LocalNews.html" target="_blank">
+              Local News
+            </a>
+            <a class="navbar-item" href="./CurrencyConverter.html" target="_blank">
+              Currency Converter
+            </a>
           </div>
         </div>
     </nav>
   </header>
 
+
+  <section class="hero">
+    <img src="./Assets/Images/background 1.jpg" alt="Thunder" height="400">
+  </section>
+
   <!----------- Section to add Cities -------->
-  <div class="columns has-text-centered mt-4" id="heroCity" >
-  
+  <div class="columns has-text-centered mt-4" id="heroCity">
+
   </div>
-<!----------------Section to append history buttons------------>
-  <section class="section" id="attBtn">
-    
+  <!----------------Section to append history buttons------------>
+  <section class="section mx-5" id="attBtn">
+
   </section>
 
   <!-------      Adding name of the City ------->
-  <section class="section" id="cityName">
-    
-  </section>
-   <!------- For adding Weather Data --->
+  <section class="section pb-5" id="cityName">
 
-   <div class="columns has-background-info-light p-3 has-text-centered" id="addWeather">
-    
-  </div>
+  </section>
+  <!------- For adding Weather Data --->
+
+  <section class="container mt-4">
+    <div class="columns has-background-info-light p-3 has-text-centered" id="addWeather">
+  </section>
+
+  <section>
+    <p class="container m-5 has-text-black">
+      Instructions
+      <br />1. Enter the name of the city desired in the input field at the top of the page.
+      <br />2. Click the search button to display the 5-day weather forecast.
+      <br />3. To look at restaurants, local news, or a currency converter simply choose the desired service in the
+      "Choose Service" dropdown menu.
+      <br />To go back home, click the logo on the top left or the "Home" button, recent cities are also displayed and
+      can be clicked to retrieve the weather.
+    </p>
+  </section>
 
   <footer class="footer">
     <div class="content has-text-centered is-flex-align-items-flex-end mt-auto">
-        <a href="https://stuartteh1995.github.io/aio-travel-app/">Home</a>
-        <br>
-        <a href="https://github.com/Stuartteh1995/aio-travel-app" target="_blank" rel="noopener noreferrer">Github Repository</a>
-        <br>
-        <p>
-          Created by Edward Lui, Karun Thiyagarajah, Sanjay Chopra, and Stuart Teh
-        </p>
+      <a href="https://stuartteh1995.github.io/aio-travel-app/">Home</a>
+      <br>
+      <a href="https://github.com/Stuartteh1995/aio-travel-app" target="_blank" rel="noopener noreferrer">Github
+        Repository</a>
+      <br>
+      <p>
+        Created by Edward Lui, Karun Thiyagarajah, Sanjay Chopra, and Stuart Teh
+      </p>
     </div>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"
-  integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
-<script src="./Assets/JavaScript/script.js"></script>
-<script src="./Assets/JavaScript/weather.js"></script>
+  <script src="./Assets/JavaScript/script.js"></script>
+  <script src="./Assets/JavaScript/weather.js"></script>
 </body>
 
 </html>
-
