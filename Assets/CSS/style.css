@@ -1,18 +1,21 @@
+#attBtn,
+#cityName,
+#addWeather {
 
-  #attBtn, #cityName , #addWeather {
+  padding: 0 !important;
 
-    padding: 0 !important;
-
-  }
-
-  #addWeather {
-
-    background-color: transparent!important;
-  }
-
-  .your-class::-webkit-input-placeholder {
-    color: #f75865
 }
+
+#addWeather {
+
+  background-color: transparent !important;
+}
+
+.your-class::-webkit-input-placeholder {
+  color: #f75865
+}
+
+
 
 /* news css */
 #news-container h1 {
@@ -22,13 +25,13 @@
   margin-top: 40px;
 }
 
-#news-container h1:hover{
+#news-container h1:hover {
   text-decoration: underline;
-  color:blue;
+  color: blue;
 }
 
-#news-container img{
-  margin:10px;
+#news-container img {
+  margin: 10px;
   height: 300px;
   width: 500px;
   border-radius: 8px;
@@ -38,36 +41,36 @@
   color: black;
 }
 
-#news-container{
+#news-container {
   border-radius: 8px;
   margin-bottom: 2rem;
   overflow: hidden;
 }
 
 /* currency converter css */
-#convertHolder{
+#convertHolder {
   justify-content: center;
   align-items: center;
 }
 
-#convertHolder h1{
-  color:black;
+#convertHolder h1 {
+  color: black;
   font-size: larger;
   margin-bottom: 10px;
 
 }
 
-.convertFolder{
+.convertFolder {
   display: flex;
-  
+
 }
 
-.convertFolder > *{
-color:black;
-margin-left: 10px;
+.convertFolder>* {
+  color: black;
+  margin-left: 10px;
 }
 
-#convertHolder{
+#convertHolder {
   border-radius: 8px;
   margin-bottom: 2rem;
   overflow: hidden;
@@ -75,8 +78,9 @@ margin-left: 10px;
 
 
 @media only screen and (max-width: 1030px) {
-  
+
   .convertFolder {
     flex-direction: column;
     align-items: center;
-  }}
+  }
+}
