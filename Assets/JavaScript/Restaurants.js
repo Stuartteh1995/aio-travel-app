@@ -94,3 +94,11 @@ fetchRestaurants();
     "border":"2px grey solid", "border-radius":"4px", "box-shadow":"3px 3px 4px grey",
     "font-weight":"400"})
   }
+
+  // mobile menu
+var burgerIcon = document.querySelector('#burger');
+var navbarMenu = document.querySelector('#nav-links');
+
+burgerIcon.addEventListener('click', () => {
+  navbarMenu.classList.toggle('is-active')
+});
