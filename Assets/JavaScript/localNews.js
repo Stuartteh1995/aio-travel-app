@@ -85,3 +85,11 @@ fetch(url)
     "font-weight":"400", "margin":"13px"});
     $("#displayWeather").append(cityDiv);
   }
+
+  // mobile menu
+var burgerIcon = document.querySelector('#burger');
+var navbarMenu = document.querySelector('#nav-links');
+
+burgerIcon.addEventListener('click', () => {
+  navbarMenu.classList.toggle('is-active')
+});
