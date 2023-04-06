@@ -1,6 +1,6 @@
 $(document).ready(function() {
   // api key and link
-  const apiKey = "";P2J0kMgUdhFNUcSKWcLchQW5mh8zYI9V
+  const apiKey = "P2J0kMgUdhFNUcSKWcLchQW5mh8zYI9V";
   const apiUrl = "https://api.apilayer.com/exchangerates_data/convert";
   
   //function to run the currency conversion
